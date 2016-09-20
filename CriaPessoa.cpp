@@ -17,6 +17,12 @@ typedef struct _pessoa{
 	int idade;
 	struct _pessoa** filho;
 }pessoa;
+//crio uma função mataPEssoa do tipo void, pois não precisa retornar nada
+//preceisa apenas eliminar o conteudo das variaves.
+void mataPessoa(pessoa* velhaPessoa){
+	free(velhaPessoa->nome);
+	free(velhaPessoa);
+}
 //crio uma função criapessoa do tipo pessoa*
 pessoa* criaPessoa(char* nome,int idade){
 	//crio uma variavel do tipo pessoa*
@@ -39,6 +45,11 @@ int main(){
 	//atribuo valores a ela atraves da funçãpo craPessoa
 	p1=criaPessoa("roger",18);
 	//faço a impressão apenas para validar as informações
+	printf("%s idade=%d",p1->nome,p1->idade);
+	//chamo a função mataPessoa(p1), para a pessoa p1 que declarei na linha 44
+	mataPessoa(p1);
+	//note neste printf, que será impresso lixo de memoria pois ele está sendo 
+	//executado apos o uso da função free();
 	printf("%s idade=%d",p1->nome,p1->idade);
 	return 0;
 }
