@@ -91,7 +91,7 @@ int main(){
 	printf("\n<-- Inserindo Filho -->\n");
 	insereFilhoPai(pai,criaPessoa("pedro",10));
 	insereFilhoMae(mae,criaPessoa("pedro",10));
-	//aguardo o precionamento de uma tecla
+	//aguardo o pressionamento de uma tecla
 	getch();
 	//agora o pai e a mae já tem filhos então eles caem na condição da linha 68 e 73 
 	//nessa impressao os filhos já aparecem
