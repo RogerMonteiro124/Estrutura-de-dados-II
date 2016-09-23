@@ -82,8 +82,8 @@ int main(){
 	pessoa* pai=0;
 	pessoa* mae=0;
 	//atribuo valores a ela atraves da funçãpo craPessoa
-	pai=criaPessoa("Luiz",18);
-	mae=criaPessoa("Carla",18);
+	pai=criaPessoa("Luiz",38);
+	mae=criaPessoa("Carla",48);
 	//faço a impressão antes de inserir filho para que seja impresso apenas o
 	//nome do pai segundo a linha 71
 	imprime(pai,mae);
